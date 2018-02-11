@@ -65,6 +65,15 @@ Inside the container, do this:
 python manage.py migrate
 ```
 
+### run tests
+
+while container is running...
+
+```
+docker exec -it dj-app python manage.py test polls
+```
+
+
 
 
 ## References
