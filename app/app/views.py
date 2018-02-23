@@ -5,6 +5,8 @@ import statsd
 import os
 import psutil
 
+# TODO: get IP and prefix from environment
+
 def index(request):
   c = statsd.StatsClient('159.100.250.75', 8125, prefix="dj-app.dev")
   cpu = psutil.cpu_percent(interval=1)
