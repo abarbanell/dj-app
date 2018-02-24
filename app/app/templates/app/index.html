@@ -3,8 +3,10 @@
 <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
 
 
-{% if path && statsdHost %}
-You're seeing page:  {{ path }} with Statsd Tracking at {{ statsdHost }}
+{% if path  %}
+    <p>
+        You're seeing page:  {{ path }} with Statsd Tracking at {{ statsdHost }}
+    </p>
 {% else %}
     <p>No context available.</p>
 {% endif %}
