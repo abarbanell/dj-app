@@ -1,0 +1,10 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
+
+
+{% if path && statsdHost %}
+You're seeing page:  {{ path }} with Statsd Tracking at {{ statsdHost }}
+{% else %}
+    <p>No context available.</p>
+{% endif %}

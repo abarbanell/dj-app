@@ -17,6 +17,8 @@ def index(request):
   c.incr("route.index")
   c.gauge('cpu.percent', cpu)
   c.gauge('mem.percent', mem.percent)
-  return HttpResponse("You're seeing page:  %s with Statsd Tracking at %s" % (request.path , StatsdHost))
+  latest_question_list = Question.objects.order_by('-pub_date')[:5]
+  context = {'path': request.path, 'statsdHost': StatsdHost}
+  return render(request, 'app/index.html', context)
 
 
