@@ -17,6 +17,6 @@ def index(request):
   c.incr("route.index")
   c.gauge('cpu.percent', cpu)
   c.gauge('mem.percent', mem.percent)
-  return HttpResponse("You're seeing page:  %s" % request.path )
+  return HttpResponse("You're seeing page:  %s with Statsd Tracking at %s" % (request.path , StatsdHost))
 
 
