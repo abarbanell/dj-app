@@ -3,3 +3,4 @@ gunicorn==19.7.1
 psutil==5.4.3
 pytz==2018.3
 statsd==3.2.2
+newrelic
