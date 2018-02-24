@@ -2,7 +2,24 @@
 
 django app, using docker
 
-## Setup
+## Setup with pipenv
+
+(TOD: document details)
+
+### Rerequisites
+
+### setup
+
+## start development server
+
+```
+pipenv shell
+cd app
+python manage.py runserver
+```
+
+
+## Setup with Docker
 
 setup via docker. Initially a single dockerfile to keep it simple.
 
