@@ -8,7 +8,9 @@ import psutil
 # TODO: get IP and prefix from environment
 
 def index(request):
-  c = statsd.StatsClient('159.100.250.75', 8125, prefix="dj-app.dev")
+  StatsdHost = os.environ['STATSD_HOST']
+  StatsdPref = os.environ['STATSD_PREFIX']
+  c = statsd.StatsClient(StatsdHost, 8125, prefix=StatsdPref)
   cpu = psutil.cpu_percent(interval=1)
   usage = psutil.disk_usage("/")
   mem = psutil.virtual_memory()
