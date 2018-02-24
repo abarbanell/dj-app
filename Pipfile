@@ -11,6 +11,8 @@ name = "pypi"
 
 [packages]
 
-Django = ">=2.0.0"
+django = ">=2.0.0"
 statsd = ">=3.2.2"
 psutil = ">=5.4.3"
+gunicorn = "*"
+whitenoise = "*"
