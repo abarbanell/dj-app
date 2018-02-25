@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install -r requirements.txt 
 
-
+ENV NEW_RELIC_APP_NAME="dj2018d docker"
 
 EXPOSE 8000
 CMD ["newrelic-admin", "run-program", "python", "manage.py", "runserver",  "0.0.0.0:8000"]

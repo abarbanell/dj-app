@@ -37,7 +37,7 @@ Development server with newrelic
 . .env.rc
 pipenv shell
 cd app
-newrelic_admin python manage.py runserver
+newrelic_admin run-program python manage.py runserver
 ```
 
 

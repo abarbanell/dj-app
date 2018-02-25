@@ -45,7 +45,8 @@ This is necessary because the app folder already exists.
 ### start django server
 
 ```
-docker run -it --rm --name dj-app -p 8000:8000 -v `pwd`/app:/usr/src/app dj-app 
+. .env.rc
+docker run -it --rm --name dj-app -e NEW_RELIC_LICENSE_KEY -e STATSD_HOST -e "STATSD_PREFIX=dj2018.docker" -p 8000:8000 -v `pwd`/app:/usr/src/app dj-app 
 ```
 
 ### enter the running container
