@@ -1,8 +1,11 @@
 ## Setup with pipenv
 
-(TOD: document details)
+(TODO: document details)
 
 ### Rerequisites
+
+- python 3.6.4, eiyther installed system wide or via anaconda (see [anaconda.md](anaconda.md) for details)
+
 
 ### setup
 
