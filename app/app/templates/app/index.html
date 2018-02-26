@@ -1,12 +1,20 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+{% verbatim %}
+<div id="app">
+    {{ message }}
+</div>
+{% endverbatim %}
 
 
-{% if path  %}
-    <p>
-        You're seeing page:  {{ path }} with Statsd Tracking at {{ statsdHost }}
-    </p>
-{% else %}
-    <p>No context available.</p>
-{% endif %}
+<script>
+    var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</script>

@@ -17,7 +17,6 @@ def index(request):
   c.incr("route.index")
   c.gauge('cpu.percent', cpu)
   c.gauge('mem.percent', mem.percent)
-  context = {'path': request.path, 'statsdHost': StatsdHost}
-  return render(request, 'app/index.html', context)
+  return render(request, 'app/index.html')
 
 
