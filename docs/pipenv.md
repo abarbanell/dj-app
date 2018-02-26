@@ -4,7 +4,7 @@
 
 ### Rerequisites
 
-- python 3.6.4, eiyther installed system wide or via anaconda (see [anaconda.md](anaconda.md) for details)
+- python 3.6.4, either installed system wide or via anaconda (see [anaconda.md](anaconda.md) for details)
 
 
 ### setup
