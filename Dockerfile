@@ -1,6 +1,6 @@
 FROM python:latest
 
-COPY . /usr/src
+COPY ./requirements.txt /usr/src
 WORKDIR /usr/src/app
 
 RUN pip install -r ../requirements.txt 
