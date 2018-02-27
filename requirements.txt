@@ -5,3 +5,7 @@ pytz==2018.3
 statsd==3.2.2
 newrelic
 whitenoise
+djangorestframework
+markdown
+django-filter
+

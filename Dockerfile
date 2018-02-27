@@ -1,8 +1,9 @@
 FROM python:latest
 
+COPY . /usr/src
 WORKDIR /usr/src/app
-COPY requirements.txt ./
-RUN pip install -r requirements.txt 
+
+RUN pip install -r ../requirements.txt 
 
 ENV NEW_RELIC_APP_NAME="dj2018d docker"
 
