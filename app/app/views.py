@@ -14,8 +14,8 @@ def index(request):
   cpu = psutil.cpu_percent(interval=1)
   usage = psutil.disk_usage("/")
   mem = psutil.virtual_memory()
-  c.incr("route.index")
-  c.gauge('cpu.percent', cpu)
-  c.gauge('mem.percent', mem.percent)
+  # c.incr("route.index")
+  # c.gauge('cpu.percent', cpu)
+  # c.gauge('mem.percent', mem.percent)
   return render(request, 'app/index.html')
 
