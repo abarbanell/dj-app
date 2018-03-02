@@ -1,20 +1,41 @@
 {% load static %}
+<html>
 
-<link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    dj2018
+  </title>
+  <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
+</head>
 
 
-{% verbatim %}
-<div id="app">
-    {{ message }}
-</div>
-{% endverbatim %}
+<body>
+  {% verbatim %}
+  <div id="app">
+    <h1>
+      {{ title }}
+    </h1>
 
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
-<script>
-    var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-})
-</script>
+    <ul>
+      <li v-for="question in questions">
+        Question text: {{ question.text }}
+      </li>
+    </ul>
+
+    <quote>
+      {{ message }}
+    </quote>
+  </div>
+  {% endverbatim %}
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script src="{% static 'app/app.js' %}"></script>
+
+  <script>
+
+  </script>
+</body>
+
+</html>
