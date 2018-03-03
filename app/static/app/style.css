@@ -3,7 +3,10 @@ body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-quote {
+blockquote {
+  border: 2px solid grey;
+  padding: 10px;
+  text-align: center;
   color: grey;
   font-size: 70%;
 }
