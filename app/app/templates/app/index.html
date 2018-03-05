@@ -20,7 +20,9 @@
 
     <ul>
       <li v-for="question in questions">
-        Question text: {{ question.question_text }}
+        <p>{{ question.question_text }}</p> 
+        <input v-model="question.question_text">
+        <button @click="updateQuestion(question)">Save</button>
       </li>
     </ul>
 

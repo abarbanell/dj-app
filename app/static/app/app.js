@@ -16,6 +16,44 @@
           }).catch(function(err) {
             console.error(err);
           })
+        },
+        updateQuestion(q) {
+          console.log(q);
+          let now = new Date();
+          q.pub_date = now.toISOString();
+          console.log(JSON.stringify(q));
+          let t = this;
+          fetch('api/questions/' + q.id + '/', {
+            method: 'PUT', // or 'PUT'
+            body: JSON.stringify(q), 
+            headers: new Headers({
+              'Content-Type': 'application/json'
+            })
+          }).then(function(data) {
+            console.log("---DATA---")
+            console.log(data);
+          }).catch(function(err) {
+            console.error("***ERROR****")
+            console.error(err);
+          })
+        },
+        saveQuestion(q) {
+          console.log(q);
+          let now = new Date();
+          q.pub_date = now.toISOString();
+          console.log(JSON.stringify(q));
+          let t = this;
+          fetch('api/questions/', {
+            method: 'POST', // or 'PUT'
+            body: JSON.stringify(q), 
+            headers: new Headers({
+              'Content-Type': 'application/json'
+            })
+          }).then(function(data) {
+            console.log(data);
+          }).catch(function(err) {
+            console.err(err);
+          })
         }
       },
       data: {

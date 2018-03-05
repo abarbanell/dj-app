@@ -54,7 +54,7 @@ class ViewTestCase(TestCase):
         )
         self.assertEqual(res.status_code, status.HTTP_200_OK)
 
-    def test_api_can_delete_quuestion(self):
+    def test_api_can_delete_question(self):
         """Test the api can delete a question."""
         question = Question.objects.get()
         response = self.client.delete(
@@ -62,3 +62,4 @@ class ViewTestCase(TestCase):
             format='json',
             follow=True)
         self.assertEquals(response.status_code, status.HTTP_204_NO_CONTENT)
+
