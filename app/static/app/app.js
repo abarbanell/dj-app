@@ -12,17 +12,13 @@
             return res.json()
           }).then(function(data) {
             t.questions = data;
-            t.message = "API data fetched"
           }).catch(function(err) {
             console.error(err);
           })
         },
         updateQuestion(q) {
-          console.log(q);
           let now = new Date();
           q.pub_date = now.toISOString();
-          console.log(JSON.stringify(q));
-          let t = this;
           fetch('api/questions/' + q.id + '/', {
             method: 'PUT', // or 'PUT'
             body: JSON.stringify(q), 
@@ -30,10 +26,10 @@
               'Content-Type': 'application/json'
             })
           }).then(function(data) {
-            console.log("---DATA---")
+            console.log("---PUT---")
             console.log(data);
           }).catch(function(err) {
-            console.error("***ERROR****")
+            console.error("***PUT-ERROR****")
             console.error(err);
           })
         },
