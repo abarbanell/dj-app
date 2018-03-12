@@ -1,5 +1,15 @@
 
 
+Vue.component('question-list', {
+  template: '<ul><slot></slot></ul>'
+
+});
+
+Vue.component('question-detail', {
+  template: '<li><slot></slot></li>'
+});
+
+
     var app = new Vue({
       el: '#app',
       mounted() {
@@ -12,6 +22,7 @@
             return res.json()
           }).then(function(data) {
             t.questions = data;
+            t.message = "API data retrieved";
           }).catch(function(err) {
             console.error(err);
           })
@@ -54,7 +65,7 @@
       },
       data: {
         message: 'static data initialized', 
-        title: 'Question list',
+        title: 'Questions',
         questions: []
       }
     })

@@ -7,32 +7,37 @@
   <title>
     dj2018
   </title>
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css"/>
   <link rel="stylesheet" type="text/css" href="{% static 'app/style.css' %}" />
 </head>
 
 
 <body>
   {% verbatim %}
-  <div id="app">
+  <div class="container" id="app">
     <h1>
       {{ title }}
     </h1>
 
-    <ul>
+    <question-list>
       <li v-for="question in questions">
         <p>{{ question.question_text }}</p> 
         <input v-model="question.question_text">
         <button @click="updateQuestion(question)">Save</button>
       </li>
-    </ul>
+      <question-detail v-for="question in questions"> {{ question.question_text }}</question-detail>
+    </question-list>
 
-    <blockquote>
-      {{ message }}
-    </blockquote>
+    <b-alert show>{{ message }} </b-alert>
+
   </div>
   {% endverbatim %}
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script src="//unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+
   <script src="{% static 'app/app.js' %}"></script>
 
   <script>
