@@ -1,1 +1,2 @@
-web: cd app && newrelic-admin run-program gunicorn app.wsgi:application
+web: newrelic-admin run-program gunicorn --chdir app app.wsgi
+
