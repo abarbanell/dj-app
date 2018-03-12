@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     "localhost",
     "dj2018s.herokuapp.com",
     "dj2018p.herokuapp.com",
+    "dj2018.dokku.abarbanell.de",
 ]
 
 
