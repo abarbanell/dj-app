@@ -33,11 +33,11 @@ Vue.component('question-detail', {
     `,
     methods: {
       toggle() {
-        console.log("expand toggled");
+        //console.log("expand toggled");
         this.isExpanded = !this.isExpanded
       },
       update() {
-        console.log("blur - save changes: " + this.qtext);
+        // console.log("blur - save changes: " + JSON.stringify(this.q));
         this.$emit("input", this.q);
       }
     }
