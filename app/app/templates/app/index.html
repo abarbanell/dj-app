@@ -20,16 +20,7 @@
       {{ title }}
     </h1>
 
-    <question-list>
-      <li v-for="question in questions">
-        <p>{{ question.question_text }}</p> 
-        <input v-model="question.question_text">
-        <button @click="updateQuestion(question)">Save</button>
-      </li>
-      <question-detail v-for="question in questions"> {{ question.question_text }}</question-detail>
-    </question-list>
-
-    <b-alert show>{{ message }} </b-alert>
+    <question-list></question-list>
 
   </div>
   {% endverbatim %}
