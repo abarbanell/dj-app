@@ -25,5 +25,14 @@ docker run --name dj-pgadmin4 \
 
 ```
 
+general postgres commands: 
+
+```
+\list; # list databases
+\l; # dto.
+\connect djdb; # connect to database djdb
+\dt; # show tables in current database
+```
+
 
 
