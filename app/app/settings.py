@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     "dj2018s.herokuapp.com",
     "dj2018p.herokuapp.com",
     "dj2018.dokku.abarbanell.de",
+    "dj2018-staging.herokuapp.com"
 ]
 
 
