@@ -28,6 +28,8 @@ docker run -it --rm --name dj-app -v `pwd`/app:/usr/src/app dj-app bash
 
 Note: improve this, the volume declaration could be better?
 
+Note: need to add Postgresql and Redis containers
+
 ### build django skeleton
 
 now inside the container, build the django project: 
@@ -43,6 +45,8 @@ django-admin startproject app .
 This is necessary because the app folder already exists.
 
 ### start django server
+
+outside the container, from your desktop: 
 
 ```
 . .env.rc
