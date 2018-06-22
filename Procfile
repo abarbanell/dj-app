@@ -1,2 +1,2 @@
-web: run-program gunicorn --chdir app app.wsgi
+web: gunicorn --chdir app app.wsgi
 
