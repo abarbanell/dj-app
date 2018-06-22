@@ -50,8 +50,12 @@ outside the container, from your desktop:
 
 ```
 . .env.rc
-docker run -it --rm --name dj-app -e NEW_RELIC_LICENSE_KEY -e STATSD_HOST -e "STATSD_PREFIX=dj2018.docker" -p 8000:8000 -v `pwd`/app:/usr/src/app dj-app 
+# with new relic
+# docker run -it --rm --name dj-app -e NEW_RELIC_LICENSE_KEY -e STATSD_HOST -e "STATSD_PREFIX=dj2018.docker" -p 8000:8000 -v `pwd`/app:/usr/src/app dj-app 
+# without new relic
+docker run -it --rm --name dj-app -e STATSD_HOST -e "STATSD_PREFIX=dj2018.docker" -p 8000:8000 -v `pwd`/app:/usr/src/app dj-app 
 ```
+
 
 ### enter the running container
 

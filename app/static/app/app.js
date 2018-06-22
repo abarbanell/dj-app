@@ -49,7 +49,7 @@ Vue.component('question-list', {
       <div class="card">
         <ul class="list-group list-group-flush">
           <question-detail  
-            v-for="question in questions" 
+            v-for="question in questions" :key="question.id"
             v-bind="question"
             @input="updateQuestion">
           </question-detail>
