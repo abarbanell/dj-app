@@ -1,12 +1,13 @@
-django
-gunicorn
-psutil
-pytz
-statsd
-# newrelic
-whitenoise
-djangorestframework
-markdown
-django-filter
-psycopg2-binary
-
+attrs==18.1.0
+coverage==4.5.1
+Django==2.0.7
+django-filter==1.1.0
+djangorestframework==3.8.2
+gunicorn==19.9.0
+hypothesis==3.66.0
+Markdown==2.6.11
+psutil==5.4.6
+psycopg2-binary==2.7.5
+pytz==2018.5
+statsd==3.2.2
+whitenoise==3.3.1
