@@ -5,8 +5,10 @@ services:
     image: postgres:alpine
     volumes:
       - data:/var/lib/postgresql/data/
+
   web:
     build: .
+    command: env
     command: pip install -r requirements.txt
     command: python app/manage.py migrate --noinput
     command: python app/manage.py runserver  0.0.0.0:8000
@@ -16,6 +18,10 @@ services:
       - 8000:8000
     environment:
       - SECRET_KEY=changemeinprod
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
     depends_on:
       - db
 

@@ -3,7 +3,7 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: python:3.6.4
+image: python:3.7.0
 
 pipelines:
   default:
@@ -12,4 +12,17 @@ pipelines:
           - pip
         script: # Modify the commands below to build your repository.
           - pip install -r requirements.txt
-          - cd app && python manage.py test polls
+          - python app/manage.py migrate --noinput
+          - python app/manage.py test app
+        services:
+          - postgres
+
+definitions: 
+  services: 
+    postgres: 
+      image: postgres
+    environment: 
+      POSTGRES_DB: 'pipelines' 
+      POSTGRES_USER: 'test_user'        
+      POSTGRES_PASSWORD: ''
+      POSTGRES_HOST: 'postgres'
