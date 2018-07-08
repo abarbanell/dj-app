@@ -13,7 +13,7 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - pip install -r requirements.txt
           - python app/manage.py migrate --noinput
-          - python app/manage.py test app
+          - python app/manage.py test app -v2
         services:
           - postgres
 
